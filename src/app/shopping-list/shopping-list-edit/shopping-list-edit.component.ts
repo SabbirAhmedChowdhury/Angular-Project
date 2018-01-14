@@ -12,7 +12,7 @@ import { ShoppingListService } from './../shopping-list.service';
 export class ShoppingListEditComponent implements OnInit {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   @ViewChild('amountInput') amountInputRef: ElementRef;
-  
+
   constructor(private shoppingListService: ShoppingListService) { }
 
   ngOnInit() {
