@@ -5,7 +5,6 @@ import { Ingredient } from '../shared/ingredient.model';
 
 @Injectable()
 export class RecipeService {
-    recipeSelected = new EventEmitter<Recipe>();
 
     private recipes: Recipe[] = [
         // tslint:disable-next-line:max-line-length
@@ -28,6 +27,10 @@ export class RecipeService {
 
     public getRecipes() {
         return this.recipes.slice();
+    }
+
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
