@@ -1,11 +1,10 @@
+import { Injectable } from '@angular/core';
 import { ShoppingListService } from './../shopping-list/shopping-list.service';
-import { EventEmitter, Injectable } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 
 @Injectable()
 export class RecipeService {
-
     private recipes: Recipe[] = [
         // tslint:disable-next-line:max-line-length
         new Recipe('Beef Burger',
